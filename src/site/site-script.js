@@ -1,5 +1,6 @@
 // @ts-nocheck
 export function runSite(){
+document.querySelectorAll('video').forEach((v)=>{v.muted=true;v.loop=true;v.playsInline=true;const p=v.play();if(p)p.catch(()=>{});});
 
 // ===== troque aqui =====
 const CHECKOUT_LANCAMENTO = 'https://pay.hub.la/0cUHHmyRy4HV44dk71bS'; // link da Hubla com R$ 29,90
