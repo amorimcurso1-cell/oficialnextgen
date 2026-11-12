@@ -6,7 +6,7 @@ document.querySelectorAll('.palco video').forEach((v)=>{v.pause();v.currentTime=
 document.querySelectorAll('.vitrine video').forEach((v)=>{const p=v.play();if(p)p.catch(()=>{});});
 
 // ===== troque aqui =====
-const CHECKOUT_LANCAMENTO = 'https://pay.hub.la/0cUHHmyRy4HV44dk71bS'; // link de checkout da Hubla; valor cobrado deve ser conferido na plataforma
+const CHECKOUT_LANCAMENTO = 'https://pay.herospark.com/sistema-de-cortes-552244'; // link de checkout da Herospark; valor cobrado deve ser conferido na plataforma
 const CHECKOUT_NORMAL = 'https://pay.hub.la/IgAt7LcSXawQIGGUsCdC';     // checkout normal; o valor cadastrado deve ser R$ 97,98
 // datas reais (horário de Brasília)
 const LANCAMENTO = new Date('2026-11-19T00:00:00-03:00');
