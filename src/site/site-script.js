@@ -7,8 +7,7 @@ document.querySelectorAll('.vitrine video').forEach((v)=>{const p=v.play();if(p)
 
 // ===== troque aqui =====
 const CHECKOUT_LANCAMENTO = 'https://pay.hub.la/0cUHHmyRy4HV44dk71bS'; // link de checkout da Hubla; valor cobrado deve ser conferido na plataforma
-const CHECKOUT_NORMAL = 'https://pay.hub.la/IgAt7LcSXawQIGGUsCdC';     // link da Hubla com R$ 97 (entra sozinho depois de 26/11)
-const PACOTE = 'https://pay.hub.la/GiQDmFj4MdJwn9m3FqLN';              // link do pacote R$ 67
+const CHECKOUT_NORMAL = 'https://pay.hub.la/IgAt7LcSXawQIGGUsCdC';     // checkout normal; o valor cadastrado deve ser R$ 97,98
 // datas reais (horário de Brasília)
 const LANCAMENTO = new Date('2026-11-19T00:00:00-03:00');
 const FIM_PRECO = new Date('2026-11-26T23:59:59-03:00');
@@ -21,7 +20,7 @@ const dois = (n) => String(n).padStart(2, '0');
 function fase(agora) {
   if (agora < LANCAMENTO) return {alvo: LANCAMENTO, rotulo: 'até o lançamento do GTA 6', curto: 'GTA 6 em', preco: '27,98'};
   if (agora < FIM_PRECO) return {alvo: FIM_PRECO, rotulo: 'pro preço de lançamento acabar', curto: 'R$ 27,98 acaba em', preco: '27,98'};
-  return {alvo: null, preco: '97'};
+  return {alvo: null, preco: '97,98'};
 }
 
 function precos(p) {
@@ -31,10 +30,9 @@ function precos(p) {
   set('[data-preco-grande]', 'R$ ' + p);
   set('[data-preco-btn]', 'R$ ' + p);
   $$('[data-preco-de]').forEach((e) => (e.style.display = lanc ? '' : 'none'));
-  set('[data-preco-texto]', lanc ? 'R$ 27,98 só na semana do lançamento' : 'R$ 97, pagamento único');
-  set('[data-ps]', lanc ? 'R$ 27,98 só até 26/11. Depois volta pra R$ 97. E cada dia que passa é um dia a menos de vantagem.' : 'O preço de lançamento acabou, mas o GTA 6 vai render cortes por anos. Quanto antes você começar, maior a vantagem.');
+  set('[data-preco-texto]', lanc ? 'R$ 27,98 só na semana do lançamento' : 'R$ 97,98, pagamento único');
+  set('[data-ps]', lanc ? 'R$ 27,98 só até 26/11. Depois volta pra R$ 97. E cada dia que passa é um dia a menos de vantagem.' : 'A promoção de lançamento terminou. O acesso continua disponível por R$ 97,98, em pagamento único.');
   $$('[data-checkout]').forEach((a) => (a.href = lanc ? CHECKOUT_LANCAMENTO : CHECKOUT_NORMAL));
-  $$('[data-pacote]').forEach((a) => (a.href = PACOTE));
 }
 
 // teste: ?agora=2026-11-20T10:00:00-03:00
