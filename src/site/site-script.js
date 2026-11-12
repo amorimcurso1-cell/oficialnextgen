@@ -31,7 +31,7 @@ function precos(p) {
   set('[data-preco-btn]', 'R$ ' + p);
   $$('[data-preco-de]').forEach((e) => (e.style.display = lanc ? '' : 'none'));
   set('[data-preco-texto]', lanc ? 'R$ 27,98 só na semana do lançamento' : 'R$ 97,98, pagamento único');
-  set('[data-ps]', lanc ? 'R$ 27,98 só até 26/11. Depois volta pra R$ 97. E cada dia que passa é um dia a menos de vantagem.' : 'A promoção de lançamento terminou. O acesso continua disponível por R$ 97,98, em pagamento único.');
+  set('[data-ps]', lanc ? 'R$ 27,98 só até 26/11. Depois, o preço pode passar para R$ 97,98. E cada dia que passa é um dia a menos de vantagem.' : 'A promoção de lançamento terminou. O acesso continua disponível por R$ 97,98, em pagamento único.');
   $$('[data-checkout]').forEach((a) => (a.href = lanc ? CHECKOUT_LANCAMENTO : CHECKOUT_NORMAL));
 }
 
