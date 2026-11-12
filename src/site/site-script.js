@@ -1,6 +1,9 @@
 // @ts-nocheck
 export function runSite(){
-document.querySelectorAll('video').forEach((v)=>{v.muted=true;v.loop=true;v.playsInline=true;const p=v.play();if(p)p.catch(()=>{});});
+document.querySelectorAll('video').forEach((v)=>{v.muted=true;v.loop=true;v.playsInline=true;});
+// de cima (palco): parado na capa. de baixo (vitrine): rodando.
+document.querySelectorAll('.palco video').forEach((v)=>{v.pause();v.currentTime=0;});
+document.querySelectorAll('.vitrine video').forEach((v)=>{const p=v.play();if(p)p.catch(()=>{});});
 
 // ===== troque aqui =====
 const CHECKOUT_LANCAMENTO = 'https://pay.hub.la/0cUHHmyRy4HV44dk71bS'; // link da Hubla com R$ 29,90
