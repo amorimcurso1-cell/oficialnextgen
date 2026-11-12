@@ -6,7 +6,7 @@ document.querySelectorAll('.palco video').forEach((v)=>{v.pause();v.currentTime=
 document.querySelectorAll('.vitrine video').forEach((v)=>{const p=v.play();if(p)p.catch(()=>{});});
 
 // ===== troque aqui =====
-const CHECKOUT_LANCAMENTO = 'https://pay.hub.la/0cUHHmyRy4HV44dk71bS'; // link da Hubla com R$ 27,98
+const CHECKOUT_LANCAMENTO = 'https://pay.hub.la/0cUHHmyRy4HV44dk71bS'; // link de checkout da Hubla; valor cobrado deve ser conferido na plataforma
 const CHECKOUT_NORMAL = 'https://pay.hub.la/IgAt7LcSXawQIGGUsCdC';     // link da Hubla com R$ 97 (entra sozinho depois de 26/11)
 const PACOTE = 'https://pay.hub.la/GiQDmFj4MdJwn9m3FqLN';              // link do pacote R$ 67
 // datas reais (horário de Brasília)
