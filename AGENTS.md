@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Deployment
+- Keep `ssr.noExternal: true` in the main Vite configuration so all server dependencies are bundled; published Workers cannot resolve bare package imports such as React.
