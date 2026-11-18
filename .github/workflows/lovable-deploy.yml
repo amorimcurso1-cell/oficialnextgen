@@ -1,4 +1,4 @@
- name: "Build e Deploy para stable-website"
+name: "Build e Deploy para stable-website"
 
 on:
   # Aciona o workflow em pushes para a branch 'main'
